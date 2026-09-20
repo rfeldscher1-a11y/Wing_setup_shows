@@ -1,4 +1,4 @@
-# AI, Tech & Audio Dev Glossary
+# AI, Tech & Audio Engineering Glossary
 ### Plain English Definitions for Real People
 *No fluff. No hype. Just what things actually mean.*
 
@@ -138,9 +138,6 @@ An app built specifically for one platform (iOS or Android) using that platform'
 **Cross-platform**
 An app that runs on multiple platforms from one codebase. Flutter is cross-platform.
 
-**API — Application Programming Interface**
-(See Part 1) In app development specifically: the way your app talks to external services or hardware like the Wing Rack.
-
 **REST API**
 A common style of API that uses standard web requests (GET, POST, PUT, DELETE). Very common for web services.
 
@@ -185,14 +182,222 @@ Apple's (iOS) and Google's (Android) platforms for distributing apps. To sell So
 
 ---
 
-## PART 3 — Audio & OSC Protocol Terms
-*(The technical side of talking to your mixers)*
+## PART 3 — Audio Engineering & Mixing Terms
+
+### Signal Flow & Gain Staging
+
+**Gain Structure / Gain Staging**
+Setting proper levels at every stage of the signal path — from mic preamp to output — so nothing clips and nothing is too quiet. Fundamental to good sound.
+
+**Headroom**
+The margin between the nominal operating level and the point of clipping/distortion.
+
+**Unity Gain**
+The point where output level equals input level (no boost or cut).
+
+**Trim / Gain Knob**
+Preamp control that sets the initial input level from a mic or line source.
+
+**Fader**
+Slider controlling channel or bus level after gain staging.
+
+**Bus**
+A pathway that combines multiple channels into one output. Your Wing has 16 buses used for monitor mixes.
+
+**Matrix**
+An output that can receive from multiple buses. Used for complex routing like sending to delay speakers or broadcast feeds.
+
+**Aux Send**
+A separate output from a channel, typically used for monitors or effects. "Send" = signal going out to an effect; "return" = the processed signal coming back into the mix.
+
+**Insert**
+Putting an effect directly in-line in a channel's signal path, so all the signal passes through it — different from a send/return, which is parallel.
+
+**Pre-fader (PRE)**
+A signal tap point before the fader. Monitor mixes are usually pre-fader so the FOH engineer moving a fader doesn't affect the performer's monitor.
+
+**Post-fader (POST)**
+A signal tap point after the fader. Effects sends are often post-fader so they follow the channel level.
+
+**Clipping**
+Distortion caused by a signal exceeding the maximum level a device can handle.
+
+**Signal-to-Noise Ratio (S/N)**
+The ratio between the desired signal level and background noise.
+
+### EQ (Equalization)
+
+**EQ**
+Adjusting the balance of frequency content in a signal.
+
+**Parametric EQ**
+EQ with adjustable frequency, gain, and bandwidth (Q) per band.
+
+**Graphic EQ**
+EQ with fixed frequency bands, each with a gain slider.
+
+**Shelf (High/Low Shelf)**
+A filter that boosts or cuts all frequencies above/below a set point.
+
+**HPF — High-Pass Filter**
+Cuts low frequencies below a set point; also called a low cut. Essential on nearly every vocal mic to remove rumble.
+
+**LPF — Low-Pass Filter**
+Cuts high frequencies above a set point; also called a high cut.
+
+**Q (Bandwidth)**
+Determines how narrow or wide an EQ band's effect is around its center frequency.
+
+**Notch Filter**
+A very narrow, steep cut used to remove a specific problem frequency (e.g., feedback).
+
+**Subtractive EQ**
+Cutting unwanted frequencies rather than boosting desired ones; generally cleaner-sounding.
+
+**Frequency Masking**
+When overlapping frequencies from different sources compete and obscure each other.
+
+### Dynamics
+
+**Compression**
+Reduces the dynamic range of a signal — makes loud parts quieter and/or quiet parts louder relative to each other. Essential for live vocals.
+
+**Threshold**
+The level at which a compressor or gate begins acting on the signal.
+
+**Ratio**
+How much gain reduction is applied once the signal crosses the threshold (e.g., 4:1).
+
+**Attack**
+How quickly a compressor/gate responds once the threshold is crossed.
+
+**Release**
+How quickly a compressor/gate stops acting after the signal falls back below threshold.
+
+**Knee (Soft/Hard)**
+How gradually or abruptly compression is applied around the threshold.
+
+**Makeup Gain**
+Gain added after compression to restore perceived loudness.
+
+**Gain Reduction**
+How much a compressor is working, measured in dB. More gain reduction = compressor working harder.
+
+**Limiter**
+A compressor with a very high ratio, used to prevent a signal from exceeding a ceiling.
+
+**Noise Gate**
+Mutes or attenuates a signal that falls below a set threshold, used to reduce bleed/noise.
+
+**Expander**
+Increases dynamic range by further attenuating signal below threshold (gentler than a gate).
+
+**Sidechain**
+Using one signal to control the dynamics processing applied to another (e.g., ducking).
+
+### Time-Based & Modulation Effects
+
+**Reverb**
+Simulates the reflections of a physical space; adds depth and ambience.
+
+**Delay**
+Repeats a signal after a set time interval; can be short (slapback) or long (echo).
+
+**Pre-Delay**
+The gap before reverb reflections begin, used to preserve clarity of the initial transient.
+
+**Chorus**
+Modulation effect that thickens a sound by layering slightly detuned, delayed copies.
+
+**Flanger**
+Modulation effect using a very short, sweeping delay, creating a sweeping/jet-like sound.
+
+**Phaser**
+Modulation effect using phase-shifted copies, creating a swirling sound.
+
+**Doubling**
+Layering a near-identical, slightly delayed copy of a signal for thickness.
+
+### Mics, DI & Connectors
+
+**Dynamic Microphone**
+Rugged mic type using a moving coil; handles high SPL well (e.g., SM58).
+
+**Condenser Microphone**
+Mic type using a charged diaphragm; more sensitive and detailed, requires phantom power.
+
+**Phantom Power (+48V)**
+DC voltage sent through an XLR cable to power condenser mics.
+
+**Polar Pattern**
+A mic's directional sensitivity (cardioid, omnidirectional, figure-8, etc.).
+
+**Proximity Effect**
+Bass boost that occurs as a directional mic gets closer to the source.
+
+**DI — Direct Input / DI Box**
+Converts a high-impedance instrument signal (like a bass guitar) to balanced mic level, without a microphone.
+
+**XLR**
+3-pin balanced connector standard for mics and pro audio.
+
+**TRS / TS**
+Tip-Ring-Sleeve (balanced/stereo) vs. Tip-Sleeve (unbalanced/mono) 1/4" connectors.
+
+**Balanced Line**
+Wiring scheme that cancels induced noise over long cable runs.
+
+**Bleed**
+Unwanted pickup of one source in another source's microphone.
+
+### Console & Live Mixing Terms
+
+**FOH — Front of House**
+The main speaker system the audience hears. Also refers to the mix position/engineer.
+
+**Monitor Mix**
+A separate mix sent to performers' stage monitors or in-ears, independent of FOH.
+
+**IEM — In-Ear Monitor**
+Wireless earphones performers wear to hear their monitor mix on stage. You use Xvive U4 IEM systems.
+
+**Wedge**
+A traditional floor-standing stage monitor speaker.
+
+**VCA — Voltage Controlled Amplifier / DCA — Digitally Controlled Amplifier**
+A control that links multiple faders together so one master fader controls them proportionally, without summing audio (unlike a group bus). Essential for live mixing. Digital consoles (Behringer, DiGiCo, etc.) call this a DCA.
+
+**Snapshot**
+A complete saved state of a mixer at a moment in time. Load one and all settings jump to that configuration instantly.
+
+**Scene**
+Similar to a snapshot — a saved configuration. Different brands use the terms differently.
+
+**Preset**
+A saved configuration for a specific channel or effect, not the whole mixer — more granular than a snapshot.
+
+**Panning**
+Positioning a signal within the stereo (or surround) field.
+
+**Solo (PFL/AFL)**
+Monitoring a single channel in isolation, pre-fader (PFL) or after-fader (AFL).
+
+**Mute Group**
+A set of channels that can be muted together with one control.
+
+**Gain Compensation**
+Automatically adjusting downstream level when input trim is changed, to keep fader position meaningful.
+
+**GPIO — General Purpose Input/Output**
+Physical ports on the Wing Rack used to connect footswitches and other external controls. You use GPIO 1 for Leslie speed and GPIO 2 for FX kill.
+
+### Digital Audio, Protocols & Networking
 
 **OSC — Open Sound Control**
 A network protocol for controlling audio equipment. Like MIDI but over a network and much more flexible. Your Wing Rack and XR18 both use OSC.
 
 **MIDI — Musical Instrument Digital Interface**
-The original music control protocol from 1983. Still widely used. Sends simple messages like "note on", "note off", "control change". Limited compared to OSC but universal.
+The original music control protocol from 1983. Still widely used. Sends simple messages like "note on," "note off," "control change." Limited compared to OSC but universal.
 
 **UDP — User Datagram Protocol**
 A fast, lightweight network protocol. Doesn't confirm delivery — just sends and hopes it arrives. XR18 uses UDP for OSC. Fast but can drop packets.
@@ -213,9 +418,9 @@ A segment of a network. Devices on the same subnet can talk to each other. Your 
 Automatic IP address assignment. Your router does this by default. Static IP = you set it manually and it never changes.
 
 **Latency**
-The delay between an action and its result. In audio, measured in milliseconds. Low latency = fast response = good.
+The delay between an action (or input) and its result (or output). In audio, measured in milliseconds. Low latency = fast response = good.
 
-**Buffer**
+**Buffer / Buffer Size**
 A small memory area that temporarily holds audio data. Larger buffer = more latency but more stable. Smaller buffer = less latency but more CPU strain.
 
 **DPC Latency — Deferred Procedure Call Latency**
@@ -233,6 +438,12 @@ The math that processes audio in real time. EQ, compression, reverb, delay — a
 **FPGA — Field Programmable Gate Array**
 A type of chip that can be reconfigured in hardware. Allen & Heath SQ uses FPGA for their ultra-low latency processing.
 
+**Plugin**
+Software that processes or generates audio inside a DAW or digital console.
+
+**Sample-Accurate**
+Timing precision down to the individual audio sample.
+
 **AES50**
 A digital audio networking standard used by Behringer/Midas for stage boxes. Your S32 connects to the Wing Rack via AES50.
 
@@ -245,70 +456,40 @@ An audio networking standard used by PreSonus StudioLive series. Requires AVB-co
 **MADI**
 A high channel count digital audio format. Used by DiGiCo and other high-end consoles for long cable runs.
 
-**Snapshot**
-A complete saved state of a mixer at a moment in time. Load a snapshot and all settings jump to that configuration instantly.
+### Monitoring & PA
 
-**Scene**
-Similar to a snapshot — a saved configuration. Different brands use the terms differently.
+**PA (Public Address) System**
+The full sound reinforcement system delivering audio to an audience.
 
-**Preset**
-A saved configuration for a specific channel or effect, not the whole mixer. More granular than a snapshot.
+**Mains**
+The primary loudspeakers covering the audience.
 
-**VCA — Voltage Controlled Amplifier**
-In digital mixing, a VCA group links multiple faders so one master fader controls them all proportionally. Essential for live mixing.
+**Subwoofer (Sub)**
+A speaker dedicated to low-frequency content.
 
-**DCA — Digitally Controlled Amplifier**
-Same concept as VCA but in digital mixers. Behringer, DiGiCo etc. use DCA groups.
+**Feedback**
+An audible loop caused when a mic picks up its own amplified sound.
 
-**Gain Structure**
-Setting proper levels at every stage of the signal path so nothing clips and nothing is too quiet. Fundamental to good sound.
+**Coverage Pattern**
+The horizontal/vertical spread of sound from a loudspeaker.
 
-**Phantom Power (+48V)**
-Power sent through an XLR cable to power condenser microphones. The +48V you see on mic channels.
+**Line Array**
+A vertically stacked speaker system designed for controlled long-throw coverage.
 
-**HPF — High Pass Filter**
-Cuts low frequencies below a set point. Also called a low cut filter. Essential on every vocal mic to remove rumble.
+### Mastering & Loudness
 
-**LPF — Low Pass Filter**
-Cuts high frequencies above a set point. Also called a high cut filter.
+**LUFS — Loudness Units Full Scale**
+A standardized measurement of perceived loudness.
 
-**Compression**
-Reduces the dynamic range of audio — makes loud parts quieter and/or quiet parts louder. Essential for live vocals.
+**True Peak**
+The actual peak level of a signal including inter-sample peaks, used to prevent clipping after conversion.
 
-**Gain Reduction**
-How much a compressor is working. Measured in dB. More gain reduction = compressor working harder.
+**Dynamic Range**
+The difference between the loudest and quietest parts of a signal.
 
-**Send / Return**
-How effects are connected in a mixer. You "send" signal from a channel to an effect, and the effect "returns" processed signal back into the mix.
-
-**Insert**
-Putting an effect directly in the signal path of a channel, so all the signal goes through it. Different from a send/return.
-
-**Bus**
-A pathway that combines multiple channels into one output. Your Wing has 16 buses used for monitor mixes.
-
-**Matrix**
-An output that can receive from multiple buses. Used for complex routing like sending to delay speakers or broadcast feeds.
-
-**DI — Direct Input**
-Connecting an instrument (like a bass guitar) directly to the mixer without a microphone, using a DI box.
-
-**PRE — Pre-fader**
-A signal tap point before the fader. Monitor mixes are pre-fader so the FOH engineer moving a fader doesn't affect the performer's monitor.
-
-**POST — Post-fader**
-A signal tap point after the fader. Effects sends are often post-fader so they follow the channel level.
-
-**FOH — Front of House**
-The main speaker system the audience hears. Also refers to the mix position where the engineer sits.
-
-**IEM — In-Ear Monitor**
-Wireless earphones performers wear to hear their monitor mix on stage. You have Xvive U4 IEM systems.
-
-**GPIO — General Purpose Input/Output**
-Physical ports on the Wing Rack used to connect footswitches and other external controls. You use GPIO 1 for Leslie speed and GPIO 2 for FX kill.
+**Mix Bus Compression**
+Light compression applied across the entire mix to glue elements together.
 
 ---
-
-*This glossary will grow as the Soundman project develops.*
-*Last updated: May 2026*
+*This glossary grows as the Soundman and Audio Rockstars projects develop.*
+*Last updated: September 2026*
