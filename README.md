@@ -23,6 +23,20 @@ Built by a working live sound engineer for a 7-piece band. Everything here is re
 
 ## Repository Structure
 
+This repo is currently flat — everything lives at the root, not yet sorted into subfolders. That's the near-term cleanup item.
+
+```
+Wing_setup_shows/
+├── .gitignore
+├── README.md
+├── soundman_glossary.md          # AI, app dev, and audio engineering terms
+├── equipment_inventory-2.md      # Current gear list
+├── mixer_compatibility-1.md      # Console/protocol compatibility notes
+├── 60_Hz_Hum_Remover-1.chn.txt   # Wing channel preset
+└── wing_repo_github.zip          # Original upload archive — pending cleanup
+```
+
+**Planned structure** (not yet built out):
 ```
 Wing_setup_shows/
 ├── presets/
@@ -36,10 +50,6 @@ Wing_setup_shows/
 ├── snippets/            # GPIO configs, partial configurations
 ├── shows/               # Complete show files
 ├── docs/                # Reference documentation
-│   ├── equipment_inventory.md
-│   ├── mixer_compatibility.md
-│   ├── publications_and_media.md
-│   └── soundman_glossary.md
 └── apps/                # OSC tools and utility scripts
     └── wing_osc_test.py
 ```
@@ -129,6 +139,13 @@ This repo is the development foundation for **Soundman** — a multiplatform Flu
 - Cross-console preset translation engine
 
 **Target platforms:** iOS, Android, Windows, Mac, Web
+
+---
+
+## Known Cleanup Items
+
+- `wing_repo_github.zip` is the original upload archive, left in the repo root — safe to delete once its contents are confirmed to already be tracked as individual files.
+- `equipment_inventory-2.md` and `mixer_compatibility-1.md` carry `-1`/`-2` suffixes from GitHub auto-renaming duplicate uploads. Filenames could be cleaned up (drop the suffix) whenever it's convenient.
 
 ---
 
