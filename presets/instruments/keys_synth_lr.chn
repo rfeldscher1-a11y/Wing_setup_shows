@@ -1,0 +1,46 @@
+#4.0# 0 "Keys Synth LR" 0 00000000000100 1
+# Keyboard Synth Stereo Pair Preset
+# Channels: Ch 19-20 (Stereo Linked)
+# Source: Primary Analog XLR / Alt: StageConnect Digital
+
+# --- STEREO CONFIGURATION ---
+/ch/$s/config/stereo ,s ON
+/ch/$s/config/link ,s ON
+
+# --- HIGH PASS FILTER ---
+/ch/$s/eq/lc/on ,s ON
+/ch/$s/eq/lc/freq ,f 60.0
+/ch/$s/eq/lc/slope ,s 12dB/oct
+
+# --- EQ ---
+/ch/$s/eq/on ,s ON
+# Low mid clarity
+/ch/$s/eq/b1/on ,s ON
+/ch/$s/eq/b1/freq ,f 400.0
+/ch/$s/eq/b1/gain ,f -2.0
+/ch/$s/eq/b1/q ,f 1.0
+/ch/$s/eq/b1/type ,s PEAK
+# Presence
+/ch/$s/eq/b2/on ,s ON
+/ch/$s/eq/b2/freq ,f 3500.0
+/ch/$s/eq/b2/gain ,f 1.5
+/ch/$s/eq/b2/q ,f 1.2
+/ch/$s/eq/b2/type ,s PEAK
+
+# --- GPIO INTEGRATION ---
+# GPIO 1 controls Leslie Speed on this channel pair
+# Target: Rotary Speaker effect (Standard FX slot)
+# Mode: Toggle (TGL) / Circuit: Normally Open (N.O.)
+# Action: Tap to switch rotation speed SLOW/FAST
+
+# --- CHANNEL FX ---
+# Rotary Speaker (Leslie emulation) - Standard FX
+/ch/$s/insert/fx/type ,s ROTARY
+/ch/$s/insert/fx/on ,s ON
+/ch/$s/insert/fx/speed ,s SLOW
+
+# Compressor: LA Leveler
+/ch/$s/comp/type ,s LALEVELER
+/ch/$s/comp/on ,s ON
+/ch/$s/comp/thr ,f -20.0
+/ch/$s/comp/gain ,f 2.0

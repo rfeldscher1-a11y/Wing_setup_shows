@@ -1,0 +1,42 @@
+#4.0# 0 "BGV" 0 00000000000100 1
+# Background Vocal Channel Preset
+# Channels: Ch 16, Ch 17, Ch 18
+# Mic: Behringer XM8500 (dynamic cardioid)
+
+# --- HIGH PASS FILTER ---
+/ch/$s/eq/lc/on ,s ON
+/ch/$s/eq/lc/freq ,f 150.0
+/ch/$s/eq/lc/slope ,s 12dB/oct
+
+# --- EQ ---
+/ch/$s/eq/on ,s ON
+/ch/$s/eq/b1/on ,s ON
+/ch/$s/eq/b1/freq ,f 250.0
+/ch/$s/eq/b1/gain ,f -4.0
+/ch/$s/eq/b1/q ,f 1.2
+/ch/$s/eq/b1/type ,s PEAK
+/ch/$s/eq/b2/on ,s ON
+/ch/$s/eq/b2/freq ,f 3000.0
+/ch/$s/eq/b2/gain ,f 1.5
+/ch/$s/eq/b2/q ,f 1.0
+/ch/$s/eq/b2/type ,s PEAK
+
+# --- CHANNEL FX ---
+# Gate: Even 88 Gate
+/ch/$s/gate/type ,s EVEN88
+/ch/$s/gate/on ,s ON
+/ch/$s/gate/thr ,f -45.0
+/ch/$s/gate/range ,f -60.0
+/ch/$s/gate/attack ,f 2.0
+/ch/$s/gate/hold ,f 75.0
+/ch/$s/gate/release ,f 150.0
+
+# Compressor: LA Leveler (LA-2A emulation)
+/ch/$s/comp/type ,s LALEVELER
+/ch/$s/comp/on ,s ON
+/ch/$s/comp/thr ,f -20.0
+/ch/$s/comp/gain ,f 3.0
+
+# --- FX SENDS ---
+/ch/$s/send/fx1/on ,s ON
+/ch/$s/send/fx1/level ,f -14.0

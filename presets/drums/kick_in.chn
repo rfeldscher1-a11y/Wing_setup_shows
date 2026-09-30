@@ -1,0 +1,53 @@
+#4.0# 0 "Kick In" 0 00000000000100 1
+# Kick Drum IN Channel Preset
+# Channel: Ch 1
+# Mic: PreSonus DM7 kick mic
+
+# --- HIGH PASS FILTER ---
+/ch/$s/eq/lc/on ,s ON
+/ch/$s/eq/lc/freq ,f 40.0
+/ch/$s/eq/lc/slope ,s 12dB/oct
+
+# --- EQ ---
+/ch/$s/eq/on ,s ON
+# Low punch boost
+/ch/$s/eq/b1/on ,s ON
+/ch/$s/eq/b1/freq ,f 60.0
+/ch/$s/eq/b1/gain ,f 4.0
+/ch/$s/eq/b1/q ,f 0.8
+/ch/$s/eq/b1/type ,s PEAK
+# Mud cut
+/ch/$s/eq/b2/on ,s ON
+/ch/$s/eq/b2/freq ,f 350.0
+/ch/$s/eq/b2/gain ,f -5.0
+/ch/$s/eq/b2/q ,f 1.2
+/ch/$s/eq/b2/type ,s PEAK
+# Attack click
+/ch/$s/eq/b3/on ,s ON
+/ch/$s/eq/b3/freq ,f 4000.0
+/ch/$s/eq/b3/gain ,f 3.0
+/ch/$s/eq/b3/q ,f 1.5
+/ch/$s/eq/b3/type ,s PEAK
+
+# --- CHANNEL FX ---
+# Gate: Even 88 Gate
+/ch/$s/gate/type ,s EVEN88
+/ch/$s/gate/on ,s ON
+/ch/$s/gate/thr ,f -30.0
+/ch/$s/gate/range ,f -80.0
+/ch/$s/gate/attack ,f 0.5
+/ch/$s/gate/hold ,f 20.0
+/ch/$s/gate/release ,f 80.0
+
+# Compressor: 76 Limiter Amp (1176 emulation)
+/ch/$s/comp/type ,s 76LIM
+/ch/$s/comp/on ,s ON
+/ch/$s/comp/thr ,f -15.0
+/ch/$s/comp/ratio ,s 4:1
+/ch/$s/comp/attack ,f 1.0
+/ch/$s/comp/release ,f 30.0
+/ch/$s/comp/gain ,f 3.0
+
+# Channel FX: Wave Designer (transient shaping)
+/ch/$s/insert/chfx/type ,s WAVEDESIGN
+/ch/$s/insert/chfx/on ,s ON

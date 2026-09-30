@@ -1,0 +1,35 @@
+#4.0# 0 "GPIO Config" 0 00000000000001 1
+# GPIO Configuration Snippet
+# 11th Street Disciples / Malice in Wonderland
+# Wing Rack Hands-Free Protocol
+
+# ==============================================
+# GPIO 1 — Leslie Speed Toggle
+# ==============================================
+# Target: Rotary Speaker Effect (Ch 19-20)
+# Parameter: Speed (SLOW/FAST)
+# Input Mode: Toggle (TGL)
+# Circuit: Normally Open (N.O.)
+# Action: Tap footswitch to toggle rotation speed
+
+/gpio/1/mode ,s IN
+/gpio/1/type ,s TGL
+/gpio/1/circuit ,s NO
+/gpio/1/target ,s /ch/19/insert/fx/speed
+/gpio/1/val_on ,s FAST
+/gpio/1/val_off ,s SLOW
+
+# ==============================================
+# GPIO 2 — FX Kill Switch
+# ==============================================
+# Purpose: Instant silence of reverb/delay tails between songs
+# Input Mode: Latching
+# Assignment: Mute Group 1 / FX Rack Bypass
+# Use Case: Prevents reverb/delay wash during talking
+
+/gpio/2/mode ,s IN
+/gpio/2/type ,s LATCH
+/gpio/2/circuit ,s NO
+/gpio/2/target ,s /fxrack/bypass
+/gpio/2/val_on ,s ON
+/gpio/2/val_off ,s OFF

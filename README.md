@@ -23,7 +23,7 @@ Built by a working live sound engineer for a 7-piece band. Everything here is re
 
 ## Repository Structure
 
-This repo is currently flat — everything lives at the root, not yet sorted into subfolders. That's the near-term cleanup item.
+Presets, snippets, and the OSC test script are sorted into subfolders. Reference docs still live at the root.
 
 ```
 Wing_setup_shows/
@@ -32,26 +32,24 @@ Wing_setup_shows/
 ├── soundman_glossary.md          # AI, app dev, and audio engineering terms
 ├── equipment_inventory.md        # Current gear list
 ├── mixer_compatibility.md        # Console/protocol compatibility notes
-├── 60_Hz_Hum_Remover-1.chn.txt   # Wing channel preset
-└── wing_repo_github.zip          # Original upload archive — pending cleanup
+├── presets/
+│   ├── vocals/                   # lead_vocal.chn, bgv.chn
+│   ├── drums/                    # kick_in.chn, snare_top.chn
+│   ├── instruments/              # acoustic_guitar.chn, keys_synth_lr.chn
+│   └── hum_removal/              # 60hz_hum_remover.chn
+├── snippets/
+│   └── gpio_config.snippet       # GPIO 1 (Leslie) and GPIO 2 (FX kill)
+└── apps/
+    └── wing_osc_test.py          # OSC discovery/read/write test (needs python-osc)
 ```
 
-**Planned structure** (not yet built out):
+**Planned, not yet built:**
 ```
-Wing_setup_shows/
-├── presets/
-│   ├── vocals/          # Lead vocal, BGV channel presets
-│   ├── drums/           # Kick, snare, tom, overhead presets
-│   ├── instruments/     # Keys, guitar, bass presets
-│   └── hum_removal/     # 60Hz and noise reduction presets
 ├── routing/
 │   ├── input_patch/     # Source to channel mapping
 │   └── output_patch/    # Bus and monitor routing
-├── snippets/            # GPIO configs, partial configurations
 ├── shows/               # Complete show files
-├── docs/                # Reference documentation
-└── apps/                # OSC tools and utility scripts
-    └── wing_osc_test.py
+└── docs/                # Move the root reference docs here
 ```
 
 ---
@@ -144,8 +142,8 @@ This repo is the development foundation for **Soundman** — a multiplatform Flu
 
 ## Known Cleanup Items
 
-- `wing_repo_github.zip` is the original upload archive, left in the repo root — safe to delete once its contents are confirmed to already be tracked as individual files.
-- `60_Hz_Hum_Remover-1.chn.txt` still carries a `-1` suffix from GitHub auto-renaming a duplicate upload. Drop the suffix whenever it's convenient.
+- Presets exist only for lead vocal, BGV, kick in, snare top, acoustic guitar, keys synth, and hum removal. The rest of the channel map has no preset yet.
+- Move the root reference docs into `docs/` when convenient.
 
 ---
 

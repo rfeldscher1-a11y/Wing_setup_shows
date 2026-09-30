@@ -1,0 +1,54 @@
+#4.0# 0 "Snare Top" 0 00000000000100 1
+# Snare Top Channel Preset
+# Channel: Ch 3
+# Mic: PreSonus DM7 snare mic
+
+# --- HIGH PASS FILTER ---
+/ch/$s/eq/lc/on ,s ON
+/ch/$s/eq/lc/freq ,f 100.0
+/ch/$s/eq/lc/slope ,s 12dB/oct
+
+# --- EQ ---
+/ch/$s/eq/on ,s ON
+# Body
+/ch/$s/eq/b1/on ,s ON
+/ch/$s/eq/b1/freq ,f 200.0
+/ch/$s/eq/b1/gain ,f 3.0
+/ch/$s/eq/b1/q ,f 1.0
+/ch/$s/eq/b1/type ,s PEAK
+# Crack/snap
+/ch/$s/eq/b2/on ,s ON
+/ch/$s/eq/b2/freq ,f 5000.0
+/ch/$s/eq/b2/gain ,f 4.0
+/ch/$s/eq/b2/q ,f 1.5
+/ch/$s/eq/b2/type ,s PEAK
+# Air
+/ch/$s/eq/b3/on ,s ON
+/ch/$s/eq/b3/freq ,f 10000.0
+/ch/$s/eq/b3/gain ,f 2.0
+/ch/$s/eq/b3/q ,f 0.8
+/ch/$s/eq/b3/type ,s PEAK
+
+# --- CHANNEL FX ---
+# Gate: Soul 9000 Gate (SSL 9000 emulation)
+/ch/$s/gate/type ,s SOUL9000
+/ch/$s/gate/on ,s ON
+/ch/$s/gate/thr ,f -25.0
+/ch/$s/gate/range ,f -80.0
+/ch/$s/gate/attack ,f 1.0
+/ch/$s/gate/hold ,f 30.0
+/ch/$s/gate/release ,f 100.0
+
+# Compressor: 76 Limiter Amp
+/ch/$s/comp/type ,s 76LIM
+/ch/$s/comp/on ,s ON
+/ch/$s/comp/thr ,f -18.0
+/ch/$s/comp/ratio ,s 4:1
+/ch/$s/comp/attack ,f 2.0
+/ch/$s/comp/release ,f 40.0
+/ch/$s/comp/gain ,f 4.0
+
+# --- FX SENDS ---
+# Send to Gated Reverb (FX Slot 3)
+/ch/$s/send/fx3/on ,s ON
+/ch/$s/send/fx3/level ,f -10.0

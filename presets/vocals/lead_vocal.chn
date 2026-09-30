@@ -1,0 +1,63 @@
+#4.0# 0 "Lead Vocal" 0 00000000000100 1
+# Lead Vocal Channel Preset
+# Channel: Ch 15
+# Mic: Behringer XM8500 (dynamic cardioid)
+# FX Chain: 76 Limiter Amp > VSS3 Reverb > Stereo Delay > Pitch Fix
+
+# --- HIGH PASS FILTER ---
+/ch/$s/eq/lc/on ,s ON
+/ch/$s/eq/lc/freq ,f 120.0
+/ch/$s/eq/lc/slope ,s 12dB/oct
+
+# --- EQ ---
+/ch/$s/eq/on ,s ON
+/ch/$s/eq/b1/on ,s ON
+/ch/$s/eq/b1/freq ,f 200.0
+/ch/$s/eq/b1/gain ,f -3.0
+/ch/$s/eq/b1/q ,f 1.4
+/ch/$s/eq/b1/type ,s PEAK
+/ch/$s/eq/b2/on ,s ON
+/ch/$s/eq/b2/freq ,f 2500.0
+/ch/$s/eq/b2/gain ,f 2.0
+/ch/$s/eq/b2/q ,f 1.0
+/ch/$s/eq/b2/type ,s PEAK
+/ch/$s/eq/b3/on ,s ON
+/ch/$s/eq/b3/freq ,f 8000.0
+/ch/$s/eq/b3/gain ,f 2.5
+/ch/$s/eq/b3/q ,f 0.8
+/ch/$s/eq/b3/type ,s PEAK
+
+# --- CHANNEL FX (Zero Latency) ---
+# Gate Slot: Even 88 Gate (Neve 88 emulation)
+/ch/$s/gate/type ,s EVEN88
+/ch/$s/gate/on ,s ON
+/ch/$s/gate/thr ,f -40.0
+/ch/$s/gate/range ,f -60.0
+/ch/$s/gate/attack ,f 1.0
+/ch/$s/gate/hold ,f 50.0
+/ch/$s/gate/release ,f 100.0
+
+# Compressor Slot: 76 Limiter Amp (1176 emulation)
+/ch/$s/comp/type ,s 76LIM
+/ch/$s/comp/on ,s ON
+/ch/$s/comp/thr ,f -18.0
+/ch/$s/comp/ratio ,s 4:1
+/ch/$s/comp/attack ,f 5.0
+/ch/$s/comp/release ,f 50.0
+/ch/$s/comp/gain ,f 4.0
+
+# EQ Slot: Soul Analogue (SSL 4000E emulation)
+/ch/$s/eq/type ,s SOUL
+/ch/$s/eq/on ,s ON
+
+# --- FX RACK SENDS ---
+# Send to FX1 (VSS3 Reverb) - Premium Slot 1
+/ch/$s/send/fx1/on ,s ON
+/ch/$s/send/fx1/level ,f -12.0
+
+# Send to FX2 (Stereo Delay) - Premium Slot 2
+/ch/$s/send/fx2/on ,s ON
+/ch/$s/send/fx2/level ,f -15.0
+
+# Send to FX3 (Pitch Fix) - Standard Slot 3
+/ch/$s/insert/fx3/on ,s ON

@@ -1,0 +1,46 @@
+#4.0# 0 "Acoustic Guitar" 0 00000000000100 1
+# Acoustic Guitar Channel Preset
+# Channel: Ch 14
+# Mic: Rode NT1 condenser
+
+# --- HIGH PASS FILTER ---
+/ch/$s/eq/lc/on ,s ON
+/ch/$s/eq/lc/freq ,f 80.0
+/ch/$s/eq/lc/slope ,s 12dB/oct
+
+# --- EQ ---
+/ch/$s/eq/on ,s ON
+# Mud reduction
+/ch/$s/eq/b1/on ,s ON
+/ch/$s/eq/b1/freq ,f 300.0
+/ch/$s/eq/b1/gain ,f -3.0
+/ch/$s/eq/b1/q ,f 1.0
+/ch/$s/eq/b1/type ,s PEAK
+# Presence boost
+/ch/$s/eq/b2/on ,s ON
+/ch/$s/eq/b2/freq ,f 2000.0
+/ch/$s/eq/b2/gain ,f 2.0
+/ch/$s/eq/b2/q ,f 1.2
+/ch/$s/eq/b2/type ,s PEAK
+# Air
+/ch/$s/eq/b3/on ,s ON
+/ch/$s/eq/b3/freq ,f 12000.0
+/ch/$s/eq/b3/gain ,f 2.5
+/ch/$s/eq/b3/q ,f 0.7
+/ch/$s/eq/b3/type ,s PEAK
+
+# --- CHANNEL FX ---
+# Channel EQ: Mach EQ4 (Maag EQ4 - Air Band)
+/ch/$s/eq/type ,s MACHEQ4
+/ch/$s/eq/on ,s ON
+
+# Compressor: LA Leveler (LA-2A)
+/ch/$s/comp/type ,s LALEVELER
+/ch/$s/comp/on ,s ON
+/ch/$s/comp/thr ,f -22.0
+/ch/$s/comp/gain ,f 2.0
+
+# --- FX SENDS ---
+# Vintage Room reverb send
+/ch/$s/send/fx4/on ,s ON
+/ch/$s/send/fx4/level ,f -14.0
