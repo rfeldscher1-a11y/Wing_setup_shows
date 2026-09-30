@@ -30,8 +30,8 @@ Wing_setup_shows/
 ├── .gitignore
 ├── README.md
 ├── soundman_glossary.md          # AI, app dev, and audio engineering terms
-├── equipment_inventory-2.md      # Current gear list
-├── mixer_compatibility-1.md      # Console/protocol compatibility notes
+├── equipment_inventory.md        # Current gear list
+├── mixer_compatibility.md        # Console/protocol compatibility notes
 ├── 60_Hz_Hum_Remover-1.chn.txt   # Wing channel preset
 └── wing_repo_github.zip          # Original upload archive — pending cleanup
 ```
@@ -145,7 +145,7 @@ This repo is the development foundation for **Soundman** — a multiplatform Flu
 ## Known Cleanup Items
 
 - `wing_repo_github.zip` is the original upload archive, left in the repo root — safe to delete once its contents are confirmed to already be tracked as individual files.
-- `equipment_inventory-2.md` and `mixer_compatibility-1.md` carry `-1`/`-2` suffixes from GitHub auto-renaming duplicate uploads. Filenames could be cleaned up (drop the suffix) whenever it's convenient.
+- `60_Hz_Hum_Remover-1.chn.txt` still carries a `-1` suffix from GitHub auto-renaming a duplicate upload. Drop the suffix whenever it's convenient.
 
 ---
 
