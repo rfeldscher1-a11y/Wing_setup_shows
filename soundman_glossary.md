@@ -103,6 +103,23 @@ Software where the code is publicly available for anyone to use, modify, or buil
 **Closed Source / Proprietary**
 Software where the code is private and owned by a company. Most commercial AI models are closed source.
 
+### Added October 2026
+
+**Claude Desktop**
+The Claude app you install on your Windows or Mac computer. Unlike the web version, it can connect to local tools (through MCP) like your files, GitHub, or your Wing Rack.
+
+**Claude Code**
+Anthropic's coding assistant that runs in a terminal (command line). You type what you want built or fixed, and it reads, writes, and runs code for you.
+
+**Context Engineering**
+The skill of deciding exactly what information, instructions, and tools an AI gets to see so it gives good answers. Think of it as prompt writing grown up — you're setting up the whole workspace, not just one question.
+
+**Flowise**
+A free, open-source tool for building AI apps and chatbots by dragging and connecting boxes on screen instead of writing code. Usually run locally with Docker.
+
+**AI Avatar**
+A computer-generated video version of a person that can "speak" any script you give it. Lets you make videos without appearing on camera yourself.
+
 ---
 
 ## PART 2 — App Development Terms
@@ -179,6 +196,38 @@ Publishing your app so users can download and use it.
 
 **App Store / Play Store**
 Apple's (iOS) and Google's (Android) platforms for distributing apps. To sell Soundman you'd publish it here.
+
+### Added October 2026
+
+**Docker**
+A tool that packages an app together with everything it needs to run, so it works the same on any computer. Used to run things like Flowise and the GitHub MCP server on your laptop.
+
+**Container / Docker Image**
+An image is the packaged, ready-to-go recipe for an app; a container is a running copy of that image. You "pull" an image once, then start containers from it whenever you need it.
+
+**WSL2 — Windows Subsystem for Linux**
+A built-in Windows feature that runs a real Linux system inside Windows. Docker Desktop uses it behind the scenes.
+
+**PAT — Personal Access Token**
+A long password-like code that lets an app (like Claude) access your GitHub account with only the permissions you choose. Keep it secret, and note when it expires.
+
+**Pull Request (PR)**
+A request to merge changes from one branch into another (usually into main). It lets you review exactly what changed before accepting it.
+
+**Interface / Adapter**
+An interface is a shared "contract" listing what a piece of code must be able to do (like "set fader" or "mute channel"). An adapter is the code that makes one specific mixer — Wing, XR18, StudioLive — fulfill that contract, so the app can treat all mixers the same way.
+
+**React**
+A popular JavaScript library for building web app screens out of reusable pieces. The Wing Command Center app is built with it.
+
+**localStorage**
+A small storage space inside your web browser where a web app can save data, like settings, between visits. It stays on that one browser and computer only.
+
+**Keepalive**
+A small message sent regularly just to keep a connection open. The XR18 stops sending updates unless it gets an `/xremote` keepalive every few seconds.
+
+**Reverse Engineering**
+Figuring out how a product or protocol works by watching and analyzing it, when the maker hasn't published the details. That's how the community learned PreSonus's UCNET protocol.
 
 ---
 
@@ -490,6 +539,69 @@ The difference between the loudest and quietest parts of a signal.
 **Mix Bus Compression**
 Light compression applied across the entire mix to glue elements together.
 
+### Added October 2026
+
+**Stage Box**
+A box on stage that holds the mic inputs and outputs and sends everything to the console over one digital cable. Your Behringer S32 is a stage box connected to the Wing Rack by AES50.
+
+**Firmware**
+The software built into a piece of hardware, like a mixer or stage box. Updating firmware adds features and fixes bugs — keep the console and stage box on matching versions.
+
+**Rider**
+A document listing what a band needs from the venue or sound crew — inputs, monitors, gear, power, and sometimes hospitality. It can also act as an agreement between the band and the venue.
+
+**Stage Plot**
+A simple drawing showing where each musician, amp, mic, monitor, and power drop sits on stage. Often goes with the input list in the rider.
+
+**DAW — Digital Audio Workstation**
+Software for recording, editing, and mixing audio on a computer. Studio One and Cakewalk are DAWs.
+
+**ASIO / ASIO4ALL**
+ASIO is a Windows audio driver standard that gives music software low-latency access to your audio hardware. ASIO4ALL is a free, universal ASIO driver for devices that don't come with their own.
+
+**UCNET**
+PreSonus's private network protocol for controlling StudioLive mixers from computers and tablets. It isn't publicly documented, so apps have to reverse-engineer it.
+
+**PreSonus StudioLive (32SC, etc.)**
+PreSonus's line of digital mixers. The 32SC is a compact 32-channel model, like the one on the Musik Ink practice stage.
+
+**Leslie Speaker**
+A speaker cabinet with spinning horns that gives organ sounds a swirling, moving tone. Players switch between slow and fast rotation — your GPIO 1 footswitch toggles that speed.
+
+**Harmonizer**
+An effect that adds pitch-shifted copies of a voice to create instant harmony parts. The Boss VE-2 is one.
+
+**Boundary Microphone**
+A flat mic designed to lie on a surface like a floor, table, or inside a kick drum. The surface helps it pick up a fuller sound. The Behringer BA19A is one.
+
+**Ground Loop / Hum Eliminator**
+A ground loop happens when gear is grounded through more than one path, causing a low hum or buzz. A hum eliminator (like the Morley MHE2) breaks that loop on the audio line without removing safety ground.
+
+**Power Conditioner**
+A rack unit that distributes power to your gear and filters out electrical noise and spikes. The ART PB4x4 is one.
+
+**SSID**
+The name of a Wi-Fi network — what you see in the list when you connect. Using the same SSID and password on the router and all extenders lets devices move between them automatically.
+
+**2.4 GHz vs. 5 GHz**
+The two main Wi-Fi bands. 2.4 GHz reaches farther and goes through walls better but is slower and more crowded; 5 GHz is faster but shorter range. Many sound techs put the mixer on its own dedicated band for a steadier connection.
+
+**Wi-Fi Extender**
+A device that repeats a Wi-Fi signal to cover more area. Placement matters — mount it up high and in the open, not tucked on top of a fridge.
+
+**Roaming**
+When a phone, tablet, or laptop switches automatically from one Wi-Fi access point to a stronger one as you move around. Important when you're mixing from a tablet while walking the room.
+
+**Guest Network**
+A separate Wi-Fi network for visitors that keeps them away from your main devices, like the mixer and office computers.
+
+**Driver**
+Small software that lets Windows talk to a piece of hardware like an audio interface. Old or broken drivers are a common cause of crashes, dropouts, and devices not showing up.
+
+**Memory Integrity (Core Isolation)**
+A Windows security feature that blocks untrusted drivers from running deep inside the system. Old audio drivers may need to be removed before it can be turned on.
+
 ---
 *This glossary grows as the Soundman and Audio Rockstars projects develop.*
-*Last updated: September 2026*
+*Last updated: October 4, 2026*
+*Next review: October 18, 2026*
