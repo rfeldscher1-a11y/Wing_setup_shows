@@ -601,7 +601,13 @@ Small software that lets Windows talk to a piece of hardware like an audio inter
 **Memory Integrity (Core Isolation)**
 A Windows security feature that blocks untrusted drivers from running deep inside the system. Old audio drivers may need to be removed before it can be turned on.
 
+**Pitch Correction**
+An effect that nudges off-key notes toward the correct pitch. Used lightly, it's barely noticeable; used heavily, you get the robotic 'Auto-Tune' sound.
+
+**Multitrack Recording**
+Recording each input to its own separate track so you can remix the show later. The WING-LIVE card records up to 64 channels to SD cards.
+
 ---
 *This glossary grows as the Soundman and Audio Rockstars projects develop.*
-*Last updated: October 4, 2026*
-*Next review: October 18, 2026*
+*Last updated: October 18, 2026*
+*Next review: November 1, 2026*
