@@ -120,6 +120,15 @@ A free, open-source tool for building AI apps and chatbots by dragging and conne
 **AI Avatar**
 A computer-generated video version of a person that can "speak" any script you give it. Lets you make videos without appearing on camera yourself.
 
+**Project (Claude)**
+A shared workspace inside Claude that keeps documents, instructions, and memory persistent across multiple conversations. The Mixer Programming App project holds the Wing Rack and Soundman work.
+
+**NotebookLM**
+Google's AI research tool that reads documents you upload and lets you ask questions, build summaries, and generate audio overviews. Handy for turning band interviews and manuals into organized reference material.
+
+**Proto-Soundman**
+Using Claude Desktop with OSC tools as a live mixer controller before the full Soundman Flutter app exists — a working proof of concept using the same Wing Rack communication the app will use.
+
 ---
 
 ## PART 2 — App Development Terms
@@ -229,6 +238,18 @@ A small message sent regularly just to keep a connection open. The XR18 stops se
 **Reverse Engineering**
 Figuring out how a product or protocol works by watching and analyzing it, when the maker hasn't published the details. That's how the community learned PreSonus's UCNET protocol.
 
+**Wing Command Center**
+The React web app for controlling the Wing Rack from a browser over OSC.
+
+**Marketplace**
+A store inside an app where creators sell or share their work. Soundman plans a marketplace where engineers can sell signature preset packs for different console brands.
+
+**Preset Translation Engine**
+A planned Soundman feature that converts a preset made for one console (like the Wing) into the equivalent settings for another (like the XR18 or X32).
+
+**PA/Mixer Split Architecture**
+Treating the PA side (mains, subs, output EQ) and the Mixer side (inputs, effects, monitor mixes) as two separate domains. The PA side gets locked once dialed in; the Mixer side stays fluid from show to show.
+
 ---
 
 ## PART 3 — Audio Engineering & Mixing Terms
@@ -298,7 +319,7 @@ Cuts high frequencies above a set point; also called a high cut.
 Determines how narrow or wide an EQ band's effect is around its center frequency.
 
 **Notch Filter**
-A very narrow, steep cut used to remove a specific problem frequency (e.g., feedback).
+A very narrow, steep cut used to remove a specific problem frequency (e.g., feedback or 60 Hz hum). The 60 Hz Hum Remover preset uses notches at 60, 180, 300, 420, and 540 Hz.
 
 **Subtractive EQ**
 Cutting unwanted frequencies rather than boosting desired ones; generally cleaner-sounding.
@@ -607,7 +628,48 @@ An effect that nudges off-key notes toward the correct pitch. Used lightly, it's
 **Multitrack Recording**
 Recording each input to its own separate track so you can remix the show later. The WING-LIVE card records up to 64 channels to SD cards.
 
+**Show File**
+A complete save of the entire mixer state — all channels, buses, effects, routing, and settings. Load one and the console jumps to exactly how it was for that gig.
+
+**Channel Preset (.chn)**
+A Wing-format file that saves the settings for a single channel — EQ, compression, gate, effects, name. The 60 Hz Hum Remover is a `.chn` file.
+
+**Signature Pack**
+A curated collection of presets made by a specific engineer and shared or sold under their name.
+
+**Waves SuperRack Performer**
+Waves Audio's live plugin host. Runs studio-quality plugins (including third-party VST3) on a laptop connected to your mixer, without needing a dedicated server.
+
+**Native Mode**
+Running SuperRack on the laptop's own CPU, with no SoundGrid server. Simpler and cheaper, but performance depends on the computer.
+
+**SoundGrid**
+Waves' server-based audio processing network. Plugins run on dedicated hardware instead of the laptop — a separate setup from native SuperRack.
+
+**LiveBox D**
+A Windows hardware appliance from Waves, pre-configured to run SuperRack for live shows.
+
+**VST3**
+The current standard plugin format for audio software. SuperRack Performer can load third-party VST3 plugins.
+
+**MKL Optimization (Waves)**
+A Waves utility that fixes abnormally high CPU use when running Waves plugins on AMD processors. Run it as Administrator after installing SuperRack.
+
+**PoE — Power over Ethernet**
+Delivers power through a standard network cable, so a device like a camera or access point needs only one cable. Requires a PoE switch or injector.
+
+**PTZ Camera — Pan/Tilt/Zoom**
+A camera that can be aimed and zoomed remotely. Used for venue coverage and live streaming. Some have auto-tracking that can cause unexpected movement if left on.
+
+### Business & Training
+
+**Fog City Audio / Fog City Sound Works**
+Rob's live sound consulting business, aimed at small bar and intimate venues.
+
+**Audio Rockstars**
+Rob's audio engineering training platform — taking people with little audio knowledge and building their skills fast.
+
 ---
 *This glossary grows as the Soundman and Audio Rockstars projects develop.*
-*Last updated: October 18, 2026*
-*Next review: November 1, 2026*
+*Last updated: October 29, 2026*
+*Next review: November 12, 2026*
